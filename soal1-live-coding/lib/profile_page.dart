@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'info_tile.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -47,13 +48,71 @@ class ProfilePage extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
+                      const SizedBox(height: 24),
+
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'Contact Information',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+
+                              InfoTile(
+                                icon: Icons.email,
+                                label: 'Email',
+                                value: 'alfanfadillah44@gmail.com',
+                              ),
+
+                              InfoTile(
+                                icon: Icons.phone,
+                                label: 'Phone',
+                                value: '085156684759',
+                              ),
+
+                              InfoTile(
+                                icon: Icons.school,
+                                label: 'Class',
+                                value: 'TI 24 SE 3',
+                              ),
+
+                              InfoTile(
+                                icon: Icons.code,
+                                label: 'GitHub',
+                                value: 'github.com/Alpannnnn',
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
+          
+
         ),
+        
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                'Terima Kasih',
+              ),
+            ),
+          );
+        },
+        child: const Icon(Icons.thumb_up),
       ),
     );
   }
