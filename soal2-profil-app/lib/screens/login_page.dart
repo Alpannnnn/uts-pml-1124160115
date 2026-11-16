@@ -26,7 +26,9 @@ class _LoginPageState extends State<LoginPage> {
         _isLoading = false;
       });
 
-      ScaffoldMessenger.of(context).showSnackBar(
+      final messenger = ScaffoldMessenger.of(context);
+      Navigator.pushReplacementNamed(context, '/profile');
+      messenger.showSnackBar(
         const SnackBar(content: Text('Login berhasil, selamat datang!')),
       );
 

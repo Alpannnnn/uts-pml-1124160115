@@ -130,12 +130,12 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     InfoTile(
                       icon: Icons.phone,
-                      label: 'Nomor HP',
+                      label: 'No. HP',
                       value: profil.hp,
                     ),
                     InfoTile(
                       icon: Icons.code,
-                      label: 'Akun GitHub',
+                      label: 'GitHub',
                       value: profil.github,
                     ),
                   ],

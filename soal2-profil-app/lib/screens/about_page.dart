@@ -59,6 +59,12 @@ class AboutPage extends StatelessWidget {
                   title: Text('Bermain Musik'),
                   subtitle: Text('Aktif bermain musik bersama band di kampus'),
                 ),
+                Divider(height: 1),
+                ListTile(
+                  leading: Icon(Icons.queue_music_sharp),
+                  title: Text('Mendengarkan Musik'),
+                  subtitle: Text('Mendengarkan berbagai genre musik untuk memperbaiki mood'),
+                ),
               ],
             ),
           ),
