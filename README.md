@@ -1,4 +1,4 @@
-# UTS Pemrograman Mobile Lanjut — Aplikasi Profil Mahasiswa
+# UTS Pemrograman Aplikasi Mobile — Aplikasi Profil Mahasiswa
 
 Repository ini berisi hasil pengerjaan Ujian Tengah Semester (UTS) mata kuliah **Aplikasi Mobile** berbasis Flutter.
 
