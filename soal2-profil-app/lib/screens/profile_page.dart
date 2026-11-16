@@ -38,11 +38,14 @@ class _ProfilePageState extends State<ProfilePage> {
     );
 
     if (dataBaru != null) {
+
       setState(() {
         profil = dataBaru;
-      });
-    }
-  }
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+    const SnackBar(content: Text('Profil berhasil diperbarui')),
+    );
+  }}
 
   @override
   Widget build(BuildContext context) {

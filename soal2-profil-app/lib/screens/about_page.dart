@@ -37,6 +37,7 @@ class AboutPage extends StatelessWidget {
             'Keahlian & Hobi',
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
+          
           SizedBox(height: 8),
           Card(
             child: Column(
@@ -63,6 +64,24 @@ class AboutPage extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+      currentIndex: 1,
+      onTap: (index) {
+        if (index == 0) {
+          Navigator.pop(context);
+        }
+      },
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: 'Profil',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.info),
+          label: 'Tentang Saya',
+        ),
+      ],
+    ),
     );
   }
 }
