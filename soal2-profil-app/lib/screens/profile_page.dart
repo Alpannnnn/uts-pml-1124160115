@@ -37,15 +37,17 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     );
 
-    if (dataBaru != null) {
+    if (!mounted) return;
 
+    if (dataBaru != null) {
       setState(() {
         profil = dataBaru;
-    });
-    ScaffoldMessenger.of(context).showSnackBar(
-    const SnackBar(content: Text('Profil berhasil diperbarui')),
-    );
-  }}
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Data berhasil diedit')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

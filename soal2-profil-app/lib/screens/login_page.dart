@@ -26,15 +26,12 @@ class _LoginPageState extends State<LoginPage> {
         _isLoading = false;
       });
 
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Login berhasil, selamat datang!')),
+      );
+
       Navigator.pushReplacementNamed(context, '/profile');
     }
-  }
-
-  @override
-  void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
-    super.dispose();
   }
 
   @override
