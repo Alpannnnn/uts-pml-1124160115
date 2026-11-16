@@ -1,17 +1,27 @@
-# soal2_profil_app
+# Soal 2 — Aplikasi Profil Mahasiswa (`Profil Alfan`)
 
-A new Flutter project.
+Aplikasi mobile multi-halaman berbasis Flutter untuk menampilkan dan mengelola data profil mahasiswa.
 
-## Getting Started
+## Identitas Pengembang
+- **Nama:** Alfan Fadillah Ramadhan
+- **NIM:** 1124160115
+- **Kelas:** TI 24 P SE 3
 
-This project is a starting point for a Flutter application.
+## Arsitektur & Komponen Flutter yang Digunakan
+- **`MaterialApp` (`lib/main.dart`):** Mengatur `theme`, `darkTheme`, `themeMode` berbasis state `isDark`, `initialRoute: '/'`, serta pemetaan `routes` (`'/'`, `'/profile'`, `'/about'`).
+- **`Scaffold`:** Kerangka utama setiap layar yang memuat `AppBar`, `body`, `FloatingActionButton`, dan `BottomNavigationBar`.
+- **`Form` & `validator`:** Validasi input form pada `LoginPage` dan `EditProfilePage` menggunakan `GlobalKey<FormState>`.
+- **`setState()`:** Pembaruan antarmuka reaktif saat mengubah tema terang/gelap maupun menyimpan perubahan data `Profile`.
+- **`Navigator`:** Pengiriman data dua arah antara `ProfilePage` dan `EditProfilePage` melalui `await Navigator.push(...)` dan `Navigator.pop(context, dataBaru)`.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshot Aplikasi
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+| Login | Profil | Edit Profil |
+| :---: | :---: | :---: |
+| ![Login](assets/images/login_page.jpg) | ![Profil](assets/images/profile_page.jpg) | ![Edit Profil](assets/images/edit_profile_page.jpg) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Cara Menjalankan
+```bash
+flutter pub get
+flutter run
+```
